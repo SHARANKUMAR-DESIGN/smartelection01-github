@@ -1,109 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Smart Election Voting System</title>
 
-<link rel="stylesheet"
-href="{{ url_for('static', filename='css/style.css') }}">
-<a href="register.html">Register Voter</a>
-<a href="vote.html">Cast Vote</a>
-<a href="results.html">Results</a>
-<a href="admin.html">Admin Dashboard</a>
-</head>
+<link rel="stylesheet" href="style.css">
 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#fff9c4,#fff176);
+min-height:100vh;
+overflow-x:hidden;
+}
+
+header{
+background:#ffca28;
+padding:20px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+font-size:40px;
+color:#333;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h2{
+font-size:50px;
+color:#222;
+margin-bottom:20px;
+animation:fadeIn 2s ease;
+}
+
+.hero p{
+font-size:20px;
+color:#444;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#ff9800;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-size:18px;
+margin:10px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#f57c00;
+transform:scale(1.05);
+}
+
+.features{
+padding:50px;
+text-align:center;
+}
+
+.features h2{
+margin-bottom:30px;
+font-size:35px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+width:280px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+footer{
+background:#ffca28;
+text-align:center;
+padding:20px;
+margin-top:40px;
+font-weight:bold;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+</style>
+
+</head>
 <body>
 
 <header>
-
-<div class="logo">
-🏛️ Smart Election Voting System
-</div>
-
-<nav>
-
-<a href="/">Home</a>
-
-<a href="/register">Register</a>
-
-<a href="/vote">Vote</a>
-
-<a href="/results">Results</a>
-
-<a href="/admin">Admin</a>
-
-</nav>
-
+<h1>🗳️ Smart Election Voting System</h1>
 </header>
 
 <section class="hero">
 
-<h1>
-India's Next Generation Voting Platform
-</h1>
+<h2>Secure Digital Voting Platform</h2>
 
 <p>
-Secure • Transparent • Digital Democracy
+Election Commission Inspired Smart Voting Project
 </p>
 
-<a href="/vote" class="btn">
-Vote Now
-</a>
+<a href="register.html" class="btn">📝 Register Voter</a>
+
+<a href="vote.html" class="btn">🗳️ Cast Vote</a>
+
+<a href="results.html" class="btn">📊 Live Results</a>
+
+<a href="admin.html" class="btn">🔐 Admin Dashboard</a>
 
 </section>
 
 <section class="features">
 
+<h2>✨ Premium Features</h2>
+
+<div class="cards">
+
 <div class="card">
-
-<h2>👤 Register</h2>
-
-<p>
-Register voters securely
-</p>
-
+<h3>👤 Voter Registration</h3>
+<p>Register voters with secure digital records.</p>
 </div>
 
 <div class="card">
-
-<h2>🗳️ Vote</h2>
-
-<p>
-One Person One Vote
-</p>
-
+<h3>🗳️ Online Voting</h3>
+<p>Simple and transparent voting process.</p>
 </div>
 
 <div class="card">
-
-<h2>📊 Results</h2>
-
-<p>
-Live Election Analytics
-</p>
-
+<h3>📊 Live Results</h3>
+<p>Real-time election analytics and charts.</p>
 </div>
 
 <div class="card">
+<h3>🎤 Voice Assistant</h3>
+<p>Interactive voice-based election guidance.</p>
+</div>
 
-<h2>🔐 Admin</h2>
+<div class="card">
+<h3>📱 Mobile Friendly</h3>
+<p>Works perfectly on phones, tablets and PCs.</p>
+</div>
 
-<p>
-Manage Elections
-</p>
+<div class="card">
+<h3>🔐 Admin Dashboard</h3>
+<p>Manage elections, candidates and reports.</p>
+</div>
 
 </div>
 
 </section>
 
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<footer>
+Developed by Sharan Kumar | Smart Election Voting System 2026
+</footer>
+
+<script>
+window.onload=function(){
+
+if('speechSynthesis' in window){
+
+let speech=new SpeechSynthesisUtterance(
+"Welcome to Smart Election Voting System"
+);
+
+speech.rate=1;
+speech.pitch=1;
+
+speechSynthesis.speak(speech);
+
+}
+
+}
+</script>
 
 </body>
-
 </html>
