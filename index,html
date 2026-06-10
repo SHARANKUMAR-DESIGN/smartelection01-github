@@ -12,7 +12,10 @@ content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet"
 href="{{ url_for('static', filename='css/style.css') }}">
-
+<a href="register.html">Register Voter</a>
+<a href="vote.html">Cast Vote</a>
+<a href="results.html">Results</a>
+<a href="admin.html">Admin Dashboard</a>
 </head>
 
 <body>
